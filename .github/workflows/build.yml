@@ -1,5 +1,4 @@
 name: iOS Build Action
-  uses: yukiarrr/ios-build-action@0150a4152ca4f11ce16f122c24ce0c15dfbaa45f
   uses: yukiarrr/ios-build-action@v1.11.2
   with:
     # Base64 encoded p12 key
