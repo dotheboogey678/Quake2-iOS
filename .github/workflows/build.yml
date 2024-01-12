@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build Bootstrap
+    name: Build quale
     runs-on: macos-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: quale.tipa
-          path: ./packages/quale.tipa
+          path: .github/quale.tipa
   update-release:
     name: Release .tipa
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
     - name: Get artifacts
       uses: actions/download-artifact@v3
       with:
-        name: Bootstrap.tipa
+        name: quale.tipa
     - name: Create new release
       uses: ncipollo/release-action@v1
       with:
