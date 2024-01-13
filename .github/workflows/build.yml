@@ -1,6 +1,4 @@
 name: iOS Build/Release Action
-  # You may pin to the exact commit or the version.
-  # uses: hectorguerrini/build-ios-action@32a06e7b8b78dbd4e9e956bc84d3ee7ec8442130
   uses: hectorguerrini/build-ios-action@v1.0.4
   with:
     # Project path
