@@ -1,7 +1,7 @@
 jobs:
   build_with_signing:
     runs-on: macos-latest
-    steps:
+      steps:
       - uses: yukiarrr/ios-build-action@v1.11.2
       with:
       project-path: Quake2-iOS.xcodeproj
