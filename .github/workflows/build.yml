@@ -1,0 +1,34 @@
+            - name: iOS Build/Release Action
+  # You may pin to the exact commit or the version.
+  # uses: hectorguerrini/build-ios-action@32a06e7b8b78dbd4e9e956bc84d3ee7ec8442130
+  uses: hectorguerrini/build-ios-action@v1.0.4
+  with:
+    # Project path
+    project-path: Quake2-iOS.xcodeproj
+    # Base64 encoded p12 file (key + cert)
+    p12-base64: 
+    # Base64 encoded mobileprovision file
+    mobileprovision-base64: 
+    # For example, iOS Distribution
+    code-signing-identity: 
+    # Team id
+    team-id: 
+    # Workspace path
+    workspace-path: Debug # optional, default is 
+    # Options app-store, ad-hoc, package, enterprise, development, or developer-id
+    export-method: # optional, default is development
+    # For example, Debug, Release
+    configuration: # optional, default is Release
+    # Certificate password
+    certificate-password: # optional, default is 
+    # Output path of ipa
+    output-path: # optional, default is output.ipa
+    # Scheme
+    scheme: # optional, default is 
+    # Targets to disable automatic code signing. Input targets separated by ,. For example, 'MyApp,YourApp'.
+    disable-targets: # optional, default is 
+    # Boolean to tell if `pod install` should be run during build.
+    build-pods: # optional
+    # The path to the Podfile.
+    pods-path: # optional, default is Podfile
+          
