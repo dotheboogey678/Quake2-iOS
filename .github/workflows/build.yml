@@ -1,5 +1,5 @@
 name: iOS Build Action
-uses: "yukiarrr/ios-build-action@v1.11.2"
+uses: yukiarrr/ios-build-action@v1.11.2
   with:
     # Base64 encoded p12 key
     p12-key-base64: # optional
