@@ -1,5 +1,5 @@
 name: iOS Build/Release Action
-  uses: hectorguerrini/build-ios-action@v1.0.4
+- uses: yukiarrr/ios-build-action@v1.11.2
   with:
     # Project path
     project-path: Quake2-iOS.xcodeproj
