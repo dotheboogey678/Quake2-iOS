@@ -33,8 +33,8 @@ jobs:
           update-targets: "Targets to be updated" # optional
           disable-targets: "Deprecated, use update-targets instead" # optional
           export-options: "Path to export options plist" # optional
-          build-sdk: "SDK version" # optional
-          build-destination: "Custom build destination" # optional
+          build-sdk: "13" # optional
+          build-destination: "oak" # optional
           cloned-source-packages-path: "Path to Swift Package Manager dependencies" # optional
           entitlements-file-path: "Path to entitlements file" # optional
           increment-build-number: "Increment the build number" # optional
