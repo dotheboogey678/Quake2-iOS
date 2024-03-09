@@ -13,9 +13,6 @@ jobs:
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.11.2
         with:
-          p12-key-base64: "base64_encoded_p12_key" # optional
-          p12-cer-base64: "base64_encoded_certificate" # optional
-          p12-base64: "base64_encoded_p12_file" # optional
           mobileprovision-base64: "base64_encoded_mobileprovision" # optional
           p12-key-path: "path_to_p12_key" # optional
           p12-cer-path: "path_to_certificate" # optional
@@ -23,8 +20,6 @@ jobs:
           mobileprovision-path: "path_to_mobileprovision" # optional
           project-path: "Quake2-iOS.xcodeproj"
           code-signing-identity: "Your Code Signing Identity"
-          team-id: "Your Team ID"
-          workspace-path: "path_to_workspace" # optional
           export-method: "Release" # optional
           configuration: "Release" # optional
           certificate-password: "Your Certificate Password" # optional
@@ -39,9 +34,6 @@ jobs:
           entitlements-file-path: "Path to entitlements file" # optional
           increment-build-number: "Increment the build number" # optional
           increment-version-number: "Increment the version number" # optional
-          bundle-identifier: "com.example.app" # optional
-          app-store-connect-api-key-id: "Your App Store Connect API Key ID" # optional
-          app-store-connect-api-key-issuer-id: "Your App Store Connect API Key Issuer ID" # optional
-          app-store-connect-api-key-base64: "base64_encoded_api_key" # optional
+          bundle-identifier: "com.real.opp" # optional
           build-path: "Path to build" # optional
           custom-keychain-name: "Your Custom Keychain Name" # optional
