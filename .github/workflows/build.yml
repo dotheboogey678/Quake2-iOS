@@ -1,70 +1,47 @@
-            - name: iOS Build Action
-  # You may pin to the exact commit or the version.
-  # uses: yukiarrr/ios-build-action@0150a4152ca4f11ce16f122c24ce0c15dfbaa45f
-  uses: yukiarrr/ios-build-action@v1.11.2
-  with:
-    # Base64 encoded p12 key
-    p12-key-base64: # optional
-    # Base64 encoded certificate for the p12 key
-    p12-cer-base64: # optional
-    # Base64 encoded p12 file (key + cert)
-    p12-base64: # optional
-    # Base64 encoded mobileprovision file
-    mobileprovision-base64: # optional
-    # p12 key path
-    p12-key-path: # optional
-    # Certificate path for the p12 key
-    p12-cer-path: # optional
-    # p12 path (key + cert)
-    p12-path: # optional
-    # mobileprovision path
-    mobileprovision-path: # optional
-    # Project path
-    project-path: Quake2-iOS.xcodeproj
-    # For example, iOS Distribution
-    code-signing-identity: 
-    # Team id
-    team-id: 
-    # Workspace path
-    workspace-path: # optional, default is 
-    # Choose app-store, ad-hoc, package, enterprise, development, or developer-id
-    export-method: Release # optional, default is app-store
-    # For example, Debug, Release
-    configuration: # optional, default is Release
-    # Certificate password
-    certificate-password: # optional, default is 
-    # Output path of ipa
-    output-path: q2.ipa # optional, default is output.ipa
-    # Scheme
-    scheme: # optional, default is 
-    # Targets to be updated with mobileprovision, code signing identity, etc
-    update-targets: # optional, default is 
-    # Deprecated, use update-targets instead
-    disable-targets: # optional, default is 
-    # Path to an export options plist
-    export-options: # optional, default is 
-    # The SDK that should be used for building the application
-    build-sdk: # optional, default is 
-    # Use a custom destination for building the app
-    build-destination: # optional, default is 
-    # Path for Swift Package Manager dependencies
-    cloned-source-packages-path: # optional, default is 
-    # Path to your entitlements file
-    entitlements-file-path: # optional, default is 
-    # Increment the build number before building the application
-    increment-build-number: # optional, default is 
-    # Increment the version number of your project. Supports patch, minor, major or a specific version number.
-    increment-version-number: # optional, default is 
-    # Bundle identifier of the application.
-    bundle-identifier: com.quakeiosport.oak # optional, default is 
-    # App Store Connect API Key ID
-    app-store-connect-api-key-id: # optional, default is 
-    # App Store Connect API Key Issuer ID
-    app-store-connect-api-key-issuer-id: # optional, default is 
-    # Base64 encoded App Store Connect API Key
-    app-store-connect-api-key-base64: # optional, default is 
-    # Build path
-    build-path: real # optional, default is 
-    # Custom Keychain Name
-    custom-keychain-name: # optional, default is ios-build.keychain
-          
+name: iOS Build Action
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: iOS Build Action
+        uses: yukiarrr/ios-build-action@v1.11.2
+        with:
+          p12-key-base64: "base64_encoded_p12_key" # optional
+          p12-cer-base64: "base64_encoded_certificate" # optional
+          p12-base64: "base64_encoded_p12_file" # optional
+          mobileprovision-base64: "base64_encoded_mobileprovision" # optional
+          p12-key-path: "path_to_p12_key" # optional
+          p12-cer-path: "path_to_certificate" # optional
+          p12-path: "path_to_p12_file" # optional
+          mobileprovision-path: "path_to_mobileprovision" # optional
+          project-path: "Quake2-iOS.xcodeproj"
+          code-signing-identity: "Your Code Signing Identity"
+          team-id: "Your Team ID"
+          workspace-path: "path_to_workspace" # optional
+          export-method: "Release" # optional
+          configuration: "Release" # optional
+          certificate-password: "Your Certificate Password" # optional
+          output-path: "q2.ipa" # optional
+          scheme: "Your Scheme" # optional
+          update-targets: "Targets to be updated" # optional
+          disable-targets: "Deprecated, use update-targets instead" # optional
+          export-options: "Path to export options plist" # optional
+          build-sdk: "SDK version" # optional
+          build-destination: "Custom build destination" # optional
+          cloned-source-packages-path: "Path to Swift Package Manager dependencies" # optional
+          entitlements-file-path: "Path to entitlements file" # optional
+          increment-build-number: "Increment the build number" # optional
+          increment-version-number: "Increment the version number" # optional
+          bundle-identifier: "com.example.app" # optional
+          app-store-connect-api-key-id: "Your App Store Connect API Key ID" # optional
+          app-store-connect-api-key-issuer-id: "Your App Store Connect API Key Issuer ID" # optional
+          app-store-connect-api-key-base64: "base64_encoded_api_key" # optional
+          build-path: "Path to build" # optional
+          custom-keychain-name: "Your Custom Keychain Name" # optional
